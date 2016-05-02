@@ -2,7 +2,7 @@
 <?php 
 
 $agent = get_posts(array(
-							'posts_per_page' => 1,
+							'posts_per_page' => -1,
 							'post_type' => 'agents'
 						));
 $showagent = get_field('always_show_agent', 'options');
