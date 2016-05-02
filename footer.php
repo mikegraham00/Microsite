@@ -101,7 +101,7 @@ $showagent = get_field('always_show_agent', 'options');
 </script>
 <?php endif; ?>
 
-<?php if( $post->ID == 10) : //this is the gallery page ?>
+<?php if( $post->post_name == 'gallery') : //this is the gallery page ?>
 <script>
 	jQuery(document).ready(function($) {
 		$('.slider').slick({
