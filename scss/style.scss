@@ -541,9 +541,14 @@ footer {
 }
 
 .agent-wrap {
+	padding: 0 2rem;
 	padding-bottom: 4rem;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	justify-content: center;
 	&.always-open {
-		display: block !important;
+		display: flex !important;
+		display: -webkit-flex !important;
 		
 	}
 	.agent-info {
@@ -551,7 +556,7 @@ footer {
 		@include display(flex);
 		@include flex-direction(row);
 		@include justify-content(center);
-		margin: 0 auto;
+		margin: 0 auto 12px;
 
 		h3 {
 			font-size: 1.2rem;
@@ -583,7 +588,7 @@ footer {
 		}
 	}
 	.agent-contact {
-		//width: 70%;
+		width: 70%;
 		font-size: 1rem;
 		@include display(flex);
 		@include flex-direction(column);
@@ -752,6 +757,10 @@ div.property-details-wrap {
 }
 
 @include media(500px) {
+	.agent-wrap {
+		flex-direction: row;
+		-webkit-flex-direction: row;
+	}
 	.agent-wrap .agent-info {
 		width: 65%;
 	}

@@ -14,15 +14,15 @@ $showagent = get_field('always_show_agent', 'options');
 	<div class="contact-toggle">Contact Agent</div>
 	<?php endif; ?>
 	<div class="centered agent-wrap <?= $showagent ? 'always-open' : ''; ?>">
+		<?php foreach ($agent as $a) : $id = $a->ID; ?>
 		<div class="agent-info">
 			<div class="agent-photo">
-				<?php foreach ($agent as $a) : $id = $a->ID; ?>
-
+				
 					<img src="<?php the_field('agent_image', $id); ?>">
-				<?php endforeach; ?>
+				
 			</div>
 			<div class="agent-contact">
-				<?php foreach ($agent as $a) : $id = $a->ID; ?>
+				
 				<div class="top">
 					<h3>
 						<?php if( get_field('agent_website', $id) ) : ?>
@@ -45,9 +45,10 @@ $showagent = get_field('always_show_agent', 'options');
 					<p class="email">e: <a href="mailto:<?php the_field('agent_email', $id); ?>"><?php the_field('agent_email', $id); ?></a></p>
 				</div>
 					
-				<?php endforeach; ?>
+				
 			</div>
 		</div>
+		<?php endforeach; ?>
 	</div>
 
 	

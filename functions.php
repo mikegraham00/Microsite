@@ -1380,4 +1380,7 @@ function get_property_id() {
     return $prop_id;
 }
 
+//disable theme and plugin editor
+define( 'DISALLOW_FILE_EDIT', true );
+
 ?>
