@@ -911,7 +911,8 @@ div.property-details-wrap {
 		}
 	}
 	.top-nav {
-		@include display(flex);
+		//@include display(flex);
+		display: block;
 		ul {
 			text-align: right;
 			height: 100%;

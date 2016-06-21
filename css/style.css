@@ -1180,13 +1180,7 @@ div.property-details-wrap {
         margin-bottom: .5rem; }
 
   .top-nav {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex; }
+    display: block; }
     .top-nav ul {
       text-align: right;
       height: 100%;
