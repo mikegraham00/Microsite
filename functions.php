@@ -916,7 +916,7 @@ if(function_exists("register_field_group"))
                 array (
                     'param' => 'page',
                     'operator' => '==',
-                    'value' => '12',
+                    'value' => get_ID_by_slug('aerial-tour'),
                     'order_no' => 0,
                     'group_no' => 0,
                 ),
@@ -1376,7 +1376,7 @@ if(function_exists("register_field_group"))
 
 function get_property_id() {
     global $wpdb;
-    $prop_id = $wpdb->get_var("SELECT ID from wp_posts WHERE post_type = 'properties' LIMIT 1");
+    $prop_id = $wpdb->get_var("SELECT ID from wp_posts WHERE post_type = 'properties' && post_status = 'publish' LIMIT 1");
     return $prop_id;
 }
 
